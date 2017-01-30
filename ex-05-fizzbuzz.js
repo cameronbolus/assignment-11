@@ -8,7 +8,22 @@
  * - for every number that is a multiple of 3 and 5, return "FizZBuzZ"
  */
 
+var fizzbuzz = function (number){
+  var returnString = ''
 
+  for(var i = 1; i < 21; i++){
+    if((number % 5) === 0 && (number % 3) === 0){
+      return 'FizZBuzZ'
+    }
+    else if((number % 3) === 0){
+      return 'fizz'
+    }else if((number % 5) === 0){
+      return 'buzz'
+    }else {
+      return '.'
+    }
+  }
+}
 
 console.assert(fizzbuzz(1) === ".")
 console.assert(fizzbuzz(2) === "..")
